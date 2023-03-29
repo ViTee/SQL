@@ -12,7 +12,7 @@
 --tinh med va mean tu kho cu chi soc den nguoi nhan dau tien
 with sub as (select *, row_number () over (partition by order_number order by order_number, event) as stt
 from data
-where event like '%Cu Chi SOC' or event like 'Giao hàng không thành công%' or event like 'Giao hàng thành công%'),
+where event like '%Cu Chi SOC' or event like 'Giao hÃ ng khÃ´ng thÃ nh cÃ´ng%' or event like 'Giao hÃ ng thÃ nh cÃ´ng%'),
 leadtime as (select a.order_number, DATEDIFF(mi, a.time, b.time) as leadtime
 from sub a join sub b
 on a.order_number = b.order_number
