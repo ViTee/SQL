@@ -1,1 +1,1 @@
-This is some of all SQL Case study I've done
+This is some of all SQL Case studies I've done.
