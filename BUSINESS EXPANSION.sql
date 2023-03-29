@@ -58,6 +58,8 @@ VALUES
 (13,4,7),
 (14,4,3)
 
+--Find all pairs of customers and agents(users) who have been in contact more than once
+
 SELECT US.ID,US.FIRST_NAME,US.LAST_NAME,CU.ID,CU.CUSTOMER_NAME,COUNT(CU.ID)
 FROM CUSTOMER CU,USER_ACCOUNT US,CONTACT CO
 WHERE CU.ID=CO.CUSTOMER_ID AND US.ID=CO.USER_ACCOUNT_ID
