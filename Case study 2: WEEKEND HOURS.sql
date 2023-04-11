@@ -202,7 +202,7 @@ INSERT INTO [attendance] ([timestamp],[emp_id]) VALUES
  ('2022-08-27 08:19:32','999'), 
  ('2022-08-27 16:19:32','999');
 
---The times that empolyees log in and out are recorded over the course of a month. For each employees, determine the number of hours worked during the weekends.
+--The times that employees log in and out are recorded over the course of a month. For each employees, determine the number of hours worked during the weekends.
 
 WITH CTE AS (SELECT EMP_ID,TIMESTAMP, DATEPART(W,TIMESTAMP) AS WK,DATEPART(DD,TIMESTAMP) AS D,DATEPART(MM,TIMESTAMP) AS M
 FROM attendance 
